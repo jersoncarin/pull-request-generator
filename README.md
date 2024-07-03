@@ -38,6 +38,8 @@ GITHUB_TOKEN="" # Personal Access Token you generated before
 REPO_OWNER="" # Your username
 REPO_NAME="" # Your repo name
 ```
+**Make sure to add `.prconfig` into `.gitignore`**
+
 
 # Running
 ```bash
@@ -45,8 +47,6 @@ gpr commit "Your commit message here"  # For windows
 pr commit "Your commit message here" # For Linux or Mac
 ```
 Note: you can use prefix `feat:`, `fix:`, `chore:`.
-
-**Make sure to add `pr.sh` into `.gitignore`**
 
 # Note
 You can modify the code as needed. For example, you can change the naming of the pull request according to your requirements.
