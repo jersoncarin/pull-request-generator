@@ -40,7 +40,7 @@ create_pull_request() {
     local response
     response=$(curl -s -X POST -H "Accept: application/vnd.github+json" -H "Authorization: Bearer ${GITHUB_TOKEN}" -H "X-GitHub-Api-Version: 2022-11-28" -d "{\"title\":\"$title\",\"head\":\"$head\",\"base\":\"$base\"}" "$url")
     
-    # Extract the html_url from the response and get the last segment after the last /
+    # Extract the pull_number from the response
     local pull_number
     pull_number=$(echo "$response" | grep -o '"html_url": *"[^"]*' | grep -o '[^"]*$' | grep -oE '[^/]+$')
     
@@ -105,7 +105,8 @@ commit() {
     
     git branch -D "$branch_name"
     echo "Deleted local branch $branch_name"
-    
+
+    # Pull again
     git pull origin main
 }
 
