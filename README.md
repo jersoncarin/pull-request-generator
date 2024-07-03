@@ -14,7 +14,9 @@ REPO_NAME="" # Your repo name
 ```bash
 ./pr.sh commit "Your commit message here"
 ```
-Note: you can use prefix `feat:`, `fix:`, `chore:`
+Note: you can use prefix `feat:`, `fix:`, `chore:`.
+
+**Make sure to add `pr.sh` into `.gitignore`**
 
 # Note
 You can modify the code as needed. For example, you can change the naming of the pull request according to your requirements.
