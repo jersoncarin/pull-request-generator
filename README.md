@@ -14,7 +14,7 @@ Download the `pr.sh` script and add it to your environment variables:
    - Add the path to the directory containing `pr`, then click `OK`.
    - Restart or SignOut your device
 
-### Linux:
+### Linux/Mac:
 1. Download `pr.sh`.
 2. Make it executable if necessary:
    ```bash
@@ -28,22 +28,6 @@ Download the `pr.sh` script and add it to your environment variables:
    - Source the file to apply changes:
      ```bash
      source ~/.bashrc   # or ~/.zshrc, depending on your shell
-     ```
-
-### macOS:
-1. Download `pr.sh`.
-2. Make it executable if necessary:
-   ```bash
-   chmod +x pr.sh
-   ```
-3. Add it to your environment variables:
-   - Edit your shell configuration file (`~/.bash_profile`, `~/.zshrc`, etc.):
-     ```bash
-     export PATH="$PATH:/path/to/pr.sh/directory"
-     ```
-   - Source the file to apply changes:
-     ```bash
-     source ~/.bash_profile   # or ~/.zshrc, depending on your shell
      ```
 
 # Setup
