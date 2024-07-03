@@ -1,7 +1,6 @@
 # Pull Request Generator
 Generate a Pull request along with commit.
 
----
 # Installation
 
 Download the `pr.sh` script and add it to your environment variables:
