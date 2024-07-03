@@ -10,8 +10,8 @@ Download the `pr.sh` script and add it to your environment variables:
 2. Put it anywhere and ensure you remember directory path you set
 3. Add it to your environment variables:
    - Right-click on `This PC` or `Computer` > Properties > Advanced system settings > Environment Variables.
-   - Under System Variables, find `Path`, then click `Edit`.
-   - Add the path to the directory containing `pr`, then click `OK`.
+   - Under User/System Variables, find `Path`, then click `Edit`.
+   - Add the path to the directory containing `gpr`, then click `OK`.
    - Restart or SignOut your device
 
 ### Linux/Mac:
