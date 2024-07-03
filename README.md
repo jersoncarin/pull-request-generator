@@ -41,8 +41,8 @@ REPO_NAME="" # Your repo name
 
 # Running
 ```bash
-gpr commit "Your commit message here"  // For windows
-pr commit "Your commit message here" // For Linux or Mac
+gpr commit "Your commit message here"  # For windows
+pr commit "Your commit message here" # For Linux or Mac
 ```
 Note: you can use prefix `feat:`, `fix:`, `chore:`.
 
