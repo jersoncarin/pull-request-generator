@@ -1,8 +1,37 @@
 #!/bin/bash
 
-GITHUB_TOKEN=""
-REPO_OWNER=""
-REPO_NAME=""
+# Check if git command is available
+if ! command -v git &> /dev/null; then
+    echo "git command is not found. Please install Git."
+    exit 1  # Exit with a non-zero status to indicate failure
+fi
+
+
+if ! [ -f ./.prconfig ]; then
+    echo "Error: .prconfig file not found." >&2
+    exit 1
+fi
+
+# Get the .prconfig the from current directory
+. ./.prconfig
+
+# Check if GITHUB_TOKEN is not set or empty
+if [ -z "${GITHUB_TOKEN+x}" ] || [ -z "$GITHUB_TOKEN" ]; then
+    echo "Error: GITHUB_TOKEN is not set or is empty." >&2
+    exit 1
+fi
+
+# Check if REPO_OWNER is not set or empty
+if [ -z "${REPO_OWNER+x}" ] || [ -z "$REPO_OWNER" ]; then
+    echo "Error: REPO_OWNER is not set or is empty." >&2
+    exit 1
+fi
+
+# Check if REPO_NAME is not set or empty
+if [ -z "${REPO_NAME+x}" ] || [ -z "$REPO_NAME" ]; then
+    echo "Error: REPO_NAME is not set or is empty." >&2
+    exit 1
+fi
 
 remove_prefixes() {
     local commit_message="$1"
@@ -100,7 +129,7 @@ commit() {
     
     git branch -D "$branch_name"
     echo "Deleted local branch $branch_name"
-
+    
     # Pull again
     git pull origin main
 }
