@@ -47,11 +47,6 @@ create_pull_request() {
     echo "$pull_number"
 }
 
-get_pull_request_number() {
-    local url="$1"
-    echo "$url" | awk -F/ '{print $NF}'
-}
-
 merge_pull_request() {
     local repo_owner="$1"
     local repo_name="$2"
